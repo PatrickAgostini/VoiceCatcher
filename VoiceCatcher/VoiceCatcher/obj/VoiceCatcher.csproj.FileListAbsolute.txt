@@ -1,0 +1,14 @@
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.exe
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.pdb
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\System.Data.SQLite.dll
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\System.Data.SQLite.xml
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.AddPatientDialog.resources
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.DataSelectDialog.resources
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.Language.English.resources
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.Language.German.resources
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.MainForm.resources
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.csproj.GenerateResource.Cache
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.exe
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.pdb
+C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\irrKlang.NET2.0.dll
