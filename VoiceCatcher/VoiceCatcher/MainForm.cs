@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Resources;
 using System.Text;
-
+using ZedGraph;
 namespace VoiceCatcher
 {
 	/// <summary>
@@ -23,7 +23,6 @@ namespace VoiceCatcher
 	
 	public partial class MainForm : Form
 	{
-		
 		public String  language = "English";
 		public Patient currentPatient;
 		public ResourceManager resources;
@@ -40,7 +39,7 @@ namespace VoiceCatcher
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
+			//			
 			this.resources = getLanguageResources(this.language);
 			this.dbHelper  = new DatabaseHelper();
 			this.AI        = new AudioInterface(this.setVUMeter, this.freq);
@@ -51,7 +50,6 @@ namespace VoiceCatcher
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
 		
 		void EnglishToolStripMenuItemClick(object sender, EventArgs e)
 		{
@@ -144,17 +142,16 @@ namespace VoiceCatcher
 			return resources;
 		}
 		
-		public void setVUMeter(int Level)
+		public void setVUMeter(float Level)
 		{
 			//this.vuMeter.Level = Level;
-			Random rnd = new Random();
-			
-			this.initViewBar(this.cursorPos+rnd.Next(-100,100));
+			this.freqLbl.Text = Level + " Hz";
+			this.initViewBar(this.cursorPos-160);
 			
 		}
-		public void freq(float f)
+		public void freq(float[] f)
 		{
-			this.freqLbl.Text = f + " Hz";
+			
 		}
 		
 		void ToneRecStart_btnClick(object sender, EventArgs e)
@@ -174,7 +171,7 @@ namespace VoiceCatcher
 		
 		void MainPlay_btnClick(object sender, EventArgs e)
 		{
-			this.isPlaying = togglePlayButton(this.mainPlay_btn, this.isPlaying);		
+			this.isPlaying = togglePlayButton(this.mainPlay_btn, this.isPlaying);
 		}
 		
 		bool togglePlayButton(System.Windows.Forms.Button button, bool state)
@@ -215,7 +212,7 @@ namespace VoiceCatcher
 		}
 		
 		void initViewBar(int pos)
-		{			
+		{
 			Bitmap combi = new Bitmap(250,50);
 			Graphics g = Graphics.FromImage(combi);
 			g.DrawImage(resizeImage((System.Drawing.Image)this.resources.GetObject("viewbar_bar"), new Size(250,50)), 0,0);

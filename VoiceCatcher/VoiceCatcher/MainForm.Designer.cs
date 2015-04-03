@@ -80,11 +80,11 @@ namespace VoiceCatcher
 			this.delete_btn = new System.Windows.Forms.Button();
 			this.mainTab = new System.Windows.Forms.TabControl();
 			this.pureToneRecTab = new System.Windows.Forms.TabPage();
+			this.panel3 = new System.Windows.Forms.Panel();
 			this.viewBar = new System.Windows.Forms.PictureBox();
+			this.freqLbl = new System.Windows.Forms.Label();
 			this.textRecTab = new System.Windows.Forms.TabPage();
 			this.readTextBox = new System.Windows.Forms.RichTextBox();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.freqLbl = new System.Windows.Forms.Label();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.patDataPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -101,9 +101,9 @@ namespace VoiceCatcher
 			this.panel1.SuspendLayout();
 			this.mainTab.SuspendLayout();
 			this.pureToneRecTab.SuspendLayout();
+			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.viewBar)).BeginInit();
 			this.textRecTab.SuspendLayout();
-			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -538,6 +538,15 @@ namespace VoiceCatcher
 			this.pureToneRecTab.TabIndex = 0;
 			this.pureToneRecTab.Text = "Pure Tone Recording";
 			// 
+			// panel3
+			// 
+			this.panel3.Controls.Add(this.viewBar);
+			this.panel3.Controls.Add(this.freqLbl);
+			this.panel3.Location = new System.Drawing.Point(62, 45);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(300, 254);
+			this.panel3.TabIndex = 1;
+			// 
 			// viewBar
 			// 
 			this.viewBar.BackColor = System.Drawing.Color.Transparent;
@@ -548,6 +557,19 @@ namespace VoiceCatcher
 			this.viewBar.Size = new System.Drawing.Size(250, 50);
 			this.viewBar.TabIndex = 0;
 			this.viewBar.TabStop = false;
+			// 
+			// freqLbl
+			// 
+			this.freqLbl.BackColor = System.Drawing.Color.White;
+			this.freqLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.freqLbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.freqLbl.ForeColor = System.Drawing.Color.Black;
+			this.freqLbl.Location = new System.Drawing.Point(70, 30);
+			this.freqLbl.Name = "freqLbl";
+			this.freqLbl.Size = new System.Drawing.Size(150, 50);
+			this.freqLbl.TabIndex = 1;
+			this.freqLbl.Text = "0 Hz";
+			this.freqLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// textRecTab
 			// 
@@ -567,28 +589,6 @@ namespace VoiceCatcher
 			this.readTextBox.Size = new System.Drawing.Size(422, 338);
 			this.readTextBox.TabIndex = 0;
 			this.readTextBox.Text = "";
-			// 
-			// panel3
-			// 
-			this.panel3.Controls.Add(this.freqLbl);
-			this.panel3.Controls.Add(this.viewBar);
-			this.panel3.Location = new System.Drawing.Point(62, 45);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(300, 254);
-			this.panel3.TabIndex = 1;
-			// 
-			// freqLbl
-			// 
-			this.freqLbl.BackColor = System.Drawing.Color.White;
-			this.freqLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.freqLbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.freqLbl.ForeColor = System.Drawing.Color.Black;
-			this.freqLbl.Location = new System.Drawing.Point(70, 47);
-			this.freqLbl.Name = "freqLbl";
-			this.freqLbl.Size = new System.Drawing.Size(150, 50);
-			this.freqLbl.TabIndex = 1;
-			this.freqLbl.Text = "0 Hz";
-			this.freqLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// MainForm
 			// 
@@ -621,9 +621,9 @@ namespace VoiceCatcher
 			this.panel1.ResumeLayout(false);
 			this.mainTab.ResumeLayout(false);
 			this.pureToneRecTab.ResumeLayout(false);
+			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.viewBar)).EndInit();
 			this.textRecTab.ResumeLayout(false);
-			this.panel3.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
@@ -674,5 +674,6 @@ namespace VoiceCatcher
 		private System.Windows.Forms.Label lblBirthdayTitl;
 		private System.Windows.Forms.Label lblNameTitl;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private ZedGraph.GraphItem graph;
 	}
 }

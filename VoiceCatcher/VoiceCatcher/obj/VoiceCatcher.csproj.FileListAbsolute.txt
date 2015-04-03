@@ -12,3 +12,12 @@ C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.exe
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.pdb
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\irrKlang.NET2.0.dll
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.AddPatientDialog.resources
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.DataSelectDialog.resources
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.Language.English.resources
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.Language.German.resources
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.MainForm.resources
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.csproj.GenerateResource.Cache
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.exe
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.pdb

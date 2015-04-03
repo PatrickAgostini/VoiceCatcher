@@ -28,7 +28,10 @@ C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\NAudio.xml
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\VU_MeterLibrary.dll
 C:\Users\HO-Audio\Documents\Python Scripts\winmail\VoiceCatcher\VoiceCatcher\bin\Debug\VU_MeterLibrary.pdb
-C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.exe.config
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.exe
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.pdb
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.csprojResolveAssemblyReference.cache
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.AddPatientDialog.resources
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.DataSelectDialog.resources
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.Language.English.resources
@@ -36,7 +39,7 @@ C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatch
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.MainForm.resources
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.csproj.GenerateResource.Cache
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.exe
-C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.exe.config
-C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.exe
-C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\VoiceCatcher.pdb
 C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\obj\Debug\VoiceCatcher.pdb
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\Pitch.dll
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\Pitch.pdb
+C:\Users\Patrick\Documents\GitHub\VoiceCatcher\VoiceCatcher\bin\Debug\ZedGraph.dll

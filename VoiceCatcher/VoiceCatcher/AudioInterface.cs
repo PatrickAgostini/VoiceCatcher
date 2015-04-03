@@ -13,7 +13,7 @@ using System.Collections;
 using NAudio;
 using NAudio.Wave;
 using NAudio.WindowsMediaFormat;
-
+using Pitch;
 namespace VoiceCatcher
 {
 	/// <summary>
@@ -35,31 +35,34 @@ namespace VoiceCatcher
 		int        ringPointer=0;
 		
 		// Levelmeter
-		Action<int> levelCallback;
-		Action<float> callback;
+		Action<float> levelCallback;
+		Action<float[]> callback;
 		
 		// Status Flags
 		bool isRecording = false;
 		int typeRecording;
-		
-		float[] prevBuffer;
-		float sampleRate = 8000;
-		int N          = 1024;
-		float maxOffset;
-		float minOffset;
-		
-		public AudioInterface(Action<int> callback, Action<float> callback2)
+		Pitch.PitchTracker pitchTracker;
+		public AudioInterface(Action<float> callback, Action<float[]> callback2)
 		{
 			this.levelCallback = callback;
 			this.callback = callback2;
+			this.pitchTracker = new PitchTracker();
+			this.pitchTracker.SampleRate = 44100;
+			this.pitchTracker.PitchDetected += OnPitchDetected;
 			InitAudioDevices();
 		}
 		
 		public void InitAudioDevices()
 		{
 			this.recorder = new WaveIn();
+			this.recorder.WaveFormat = new WaveFormat(44100,1);
 			this.recorder.DataAvailable += RecorderOnDataAvailable;
 			this.recorder.StartRecording();
+		}
+		
+		private void OnPitchDetected(PitchTracker sender, PitchTracker.PitchRecord pitchRecord)
+		{
+			this.levelCallback(pitchRecord.Pitch);
 		}
 		
 		private void RecorderOnDataAvailable(object sender, WaveInEventArgs waveInEventArgs)
@@ -76,9 +79,28 @@ namespace VoiceCatcher
 						break;
 				}
 			}
-			this.levelCallback(Convert.ToInt16(RMS(waveInEventArgs.Buffer)));
+			float[] fValues = byte2Float(waveInEventArgs.Buffer);
+			
+			this.pitchTracker.ProcessBuffer(fValues, waveInEventArgs.BytesRecorded);
+			this.callback(fValues);
 		}
 		
+		public float BAToSingle( byte[ ] bytes, int index )
+		{
+			return (float)BitConverter.ToInt16(bytes, index )/255/255*2;
+		}
+		public float[] byte2Float(byte[] values)
+		{
+			int ii =0 ;
+			float[] fValues = new float[values.Length/2];
+			for(int i=0;i<values.Length/2;i++)
+			{
+				fValues[i] = BAToSingle(values, ii);
+				ii += 2;
+			}
+			return fValues;
+		}
+			
 		public void startRecording(int flag, int duration)
 		{
 			switch(flag)
@@ -167,30 +189,17 @@ namespace VoiceCatcher
 			return false;
 		}
 		
-		public double RMS(byte[] values)
+		public float RMS(float[] values)
 		{
-			short[] sampleData = new short[values.Length/2];
-			Buffer.BlockCopy(values, 0, sampleData, 0, values.Length);
-			double s = 0;
+			float s = 0;
 			int i;
-			for (i = 0; i < sampleData.Length; i++)
+			for (i = 0; i < values.Length; i++)
 			{
-				s += sampleData[i]*sampleData[i];
+				s += values[i]*values[i];
 			}
 			s/= values.Length;
-			return  NAudio.Utils.Decibels.LinearToDecibels(Math.Sqrt(s))-40;
+			return (float) NAudio.Utils.Decibels.LinearToDecibels(Math.Sqrt((double)s));
 		}
-		
-		public void AutoCorrelator(int sampleRate)
-		{
-			this.sampleRate = (float)sampleRate;
-			int minFreq = 85;
-			int maxFreq = 255;
-
-			this.maxOffset = sampleRate / minFreq;
-			this.minOffset = sampleRate / maxFreq;
-		}
-		
 		
 	}
 }
